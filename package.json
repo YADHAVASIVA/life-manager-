@@ -1,0 +1,49 @@
+{
+  "name": "lifeos",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "android:clean": "node -e \"const fs=require('fs'); fs.rmSync('android', {recursive:true, force:true});\" && expo prebuild --platform android && node -e \"require('fs').writeFileSync('android/local.properties', 'sdk.dir=C:\\\\\\\\Users\\\\\\\\omen1\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Android\\\\\\\\Sdk');\" && expo run:android",
+    "android:run": "expo run:android",
+    "android:build": "cd android && gradlew.bat assembleDebug",
+    "android:apk": "node -e \"console.log('\\n>>> APK Path: android/app/build/outputs/apk/debug/app-debug.apk\\n')\"",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit",
+    "android": "expo run:android"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^14.0.0",
+    "@react-native-async-storage/async-storage": "^1.23.1",
+    "@react-native-community/datetimepicker": "8.0.1",
+    "@react-navigation/bottom-tabs": "^6.5.20",
+    "@react-navigation/native": "^6.1.17",
+    "@react-navigation/native-stack": "^6.9.26",
+    "date-fns": "^3.6.0",
+    "expo": "~51.0.28",
+    "expo-constants": "~16.0.2",
+    "expo-font": "~12.0.9",
+    "expo-linear-gradient": "~13.0.2",
+    "expo-linking": "~6.3.1",
+    "expo-notifications": "~0.28.9",
+    "expo-status-bar": "~1.12.1",
+    "expo-system-ui": "~3.0.7",
+    "react": "18.2.0",
+    "react-native": "0.74.5",
+    "react-native-gesture-handler": "~2.16.1",
+    "react-native-mmkv": "^2.12.2",
+    "react-native-reanimated": "~3.10.1",
+    "react-native-safe-area-context": "4.10.5",
+    "react-native-screens": "3.31.1",
+    "react-native-svg": "15.2.0",
+    "zustand": "^4.5.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@types/react": "~18.2.45",
+    "babel-plugin-module-resolver": "^5.0.2",
+    "typescript": "^5.3.0"
+  },
+  "private": true
+}
